@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp6_Funwith2DArrays
+﻿using System;
+
+namespace ConsoleApp6_Funwith2DArrays
 {
     internal class Program
     {
@@ -13,26 +15,62 @@
             //Console.WriteLine("You typed  " + column + " , "  + row);
 
 
-            int[,] board = new int[column, row];
+            int[,] board = new int[row, column];
 
             //if user chooses 4 columns , 3 rows --> total repetition is 12 times
 
-            Console.WriteLine(board[0, 0] = 1);
-            Console.WriteLine(board[0, 1] = 2);
-            Console.WriteLine(board[0, 2] = 3);
-            Console.WriteLine(board[0, 3] = 4);
+            //Console.WriteLine(board[0, 0] = 1);
+            //Console.WriteLine(board[0, 1] = 2);
+            //Console.WriteLine(board[0, 2] = 3);
+            //Console.WriteLine(board[0, 3] = 4);
 
-            Console.WriteLine(board[1, 0] = 5);
-            Console.WriteLine(board[1, 1] = 6);
-            Console.WriteLine(board[1, 2] = 7);
-            Console.WriteLine(board[1, 3] = 8);
+            //Console.WriteLine(board[1, 0] = 5);
+            //Console.WriteLine(board[1, 1] = 6);
+            //Console.WriteLine(board[1, 2] = 7);
+            //Console.WriteLine(board[1, 3] = 8);
 
-            Console.WriteLine(board[2, 0] = 9);
-            Console.WriteLine(board[2, 1] = 10);
-            Console.WriteLine(board[2, 2] = 11);
-            Console.WriteLine(board[2, 3] = 12);
+            //Console.WriteLine(board[2, 0] = 9);
+            //Console.WriteLine(board[2, 1] = 10);
+            //Console.WriteLine(board[2, 2] = 11);
+            //Console.WriteLine(board[2, 3] = 12);
 
-           
-        }
+
+            for (int rowIndex = 0; rowIndex < row; rowIndex++)
+            {
+                for (int columnIndex = 0; columnIndex < column; columnIndex++)
+                {
+
+
+                    if (rowIndex <1)
+                    {
+                        board[rowIndex, columnIndex] = columnIndex + 1;
+                        Console.Write(board[rowIndex, columnIndex]);
+                    }
+
+                    
+
+                    if (rowIndex==1)
+                    {
+                        board[rowIndex, columnIndex] = columnIndex + 5;
+                        Console.Write(board[rowIndex, columnIndex]);
+                    }
+
+                    
+
+                    if (rowIndex ==2)
+                    {
+                        board[rowIndex, columnIndex] = columnIndex + 9;
+
+                        Console.Write(board[rowIndex, columnIndex]);
+                        
+
+                    }
+
+                }
+            }
+
+
+               
+          }
     }
 }
