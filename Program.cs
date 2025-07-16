@@ -16,6 +16,7 @@ namespace ConsoleApp6_Funwith2DArrays
 
 
             int[,] board = new int[row, column];
+            int gridValue = 1;
 
             //if user chooses 4 columns , 3 rows --> total repetition is 12 times
 
@@ -40,37 +41,19 @@ namespace ConsoleApp6_Funwith2DArrays
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
 
+                    board[rowIndex, columnIndex] = gridValue;
+                    Console.Write(board[rowIndex, columnIndex]);
 
-                    if (rowIndex <1)
-                    {
-                        board[rowIndex, columnIndex] = columnIndex + 1;
-                        Console.Write(board[rowIndex, columnIndex]);
-                    }
 
-                    
-
-                    if (rowIndex==1)
-                    {
-                        board[rowIndex, columnIndex] = columnIndex + 5;
-                        Console.Write(board[rowIndex, columnIndex]);
-                    }
-
-                    
-
-                    if (rowIndex ==2)
-                    {
-                        board[rowIndex, columnIndex] = columnIndex + 9;
-
-                        Console.Write(board[rowIndex, columnIndex]);
-                        
-
-                    }
+                    gridValue++;
 
                 }
+
+                Console.WriteLine();
             }
 
 
-               
-          }
+
+        }
     }
 }
