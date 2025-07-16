@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Common;
 
 namespace ConsoleApp6_Funwith2DArrays
 {
@@ -17,7 +18,7 @@ namespace ConsoleApp6_Funwith2DArrays
 
             int[,] board = new int[row, column];
             int gridValue = 1;
-
+            int newGridv = 1;
             //if user chooses 4 columns , 3 rows --> total repetition is 12 times
 
             //Console.WriteLine(board[0, 0] = 1);
@@ -41,11 +42,11 @@ namespace ConsoleApp6_Funwith2DArrays
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
 
-                    board[rowIndex, columnIndex] = gridValue;
+                    board[rowIndex, columnIndex] = newGridv*newGridv;
                     Console.Write(board[rowIndex, columnIndex]);
 
 
-                    gridValue++;
+                    newGridv++;
 
                 }
 
@@ -57,3 +58,19 @@ namespace ConsoleApp6_Funwith2DArrays
         }
     }
 }
+
+// for (int rowIndex = 0; rowIndex < row; rowIndex++)
+//{
+//    for (int columnIndex = 0; columnIndex < column; columnIndex++)
+//    {
+
+//        board[rowIndex, columnIndex] = gridValue;
+//        Console.Write(board[rowIndex, columnIndex]);
+
+
+//        gridValue++;
+
+//    }
+
+//    Console.WriteLine();
+//}
