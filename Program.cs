@@ -17,8 +17,10 @@ namespace ConsoleApp6_Funwith2DArrays
 
 
             int[,] board = new int[row, column];
-            int gridValue = 1;
+            //const int GRID_VALUE = 1;
+            //const int NEW_GRID_START = 1;
             int newGridv = 1;
+
             //if user chooses 4 columns , 3 rows --> total repetition is 12 times
 
             //Console.WriteLine(board[0, 0] = 1);
@@ -36,24 +38,43 @@ namespace ConsoleApp6_Funwith2DArrays
             //Console.WriteLine(board[2, 2] = 11);
             //Console.WriteLine(board[2, 3] = 12);
 
+            //while (columnIndex < column)
+            //{ Console.Write("_"); }
+
+            for (int i = 0; i < column; i++)
+            {
+                Console.Write("_");
+
+            }
+            Console.WriteLine();
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
+
+
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
+                    
 
-                    board[rowIndex, columnIndex] = newGridv*newGridv;
+                    board[rowIndex, columnIndex] = newGridv * newGridv;
                     Console.Write(board[rowIndex, columnIndex]);
 
+                    Console.Write("¦");
 
                     newGridv++;
 
                 }
 
+
                 Console.WriteLine();
             }
 
+            
+            for (int i = 0; i < column; i++)
+            {
+                Console.Write("_");
 
+            }
 
         }
     }
@@ -67,10 +88,12 @@ namespace ConsoleApp6_Funwith2DArrays
 //        board[rowIndex, columnIndex] = gridValue;
 //        Console.Write(board[rowIndex, columnIndex]);
 
-
 //        gridValue++;
 
 //    }
 
 //    Console.WriteLine();
 //}
+
+
+//  Console.Write("_");
