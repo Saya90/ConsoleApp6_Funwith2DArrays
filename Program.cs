@@ -16,10 +16,13 @@ namespace ConsoleApp6_Funwith2DArrays
             //Console.WriteLine("You typed  " + column + " , "  + row);
 
 
-            int[,] board = new int[row, column];
+            int[,] board = new int[row, column];  
+
             //const int GRID_VALUE = 1;
             //const int NEW_GRID_START = 1;
             int newGridv = 1;
+
+
 
             //if user chooses 4 columns , 3 rows --> total repetition is 12 times
 
@@ -43,36 +46,34 @@ namespace ConsoleApp6_Funwith2DArrays
 
             for (int i = 0; i < column; i++)
             {
-                Console.Write("_");
+                Console.Write(" _ _ ");
 
             }
             Console.WriteLine();
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
-
+                Console.Write("¦");
 
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
-                    
+
 
                     board[rowIndex, columnIndex] = newGridv * newGridv;
-                    Console.Write(board[rowIndex, columnIndex]);
+                    Console.Write($"{board[rowIndex, columnIndex]:000}");
 
                     Console.Write("¦");
 
                     newGridv++;
-
+                                       
                 }
 
-
                 Console.WriteLine();
-            }
+                }
 
-            
             for (int i = 0; i < column; i++)
             {
-                Console.Write("_");
+                Console.Write(" _ _ ");
 
             }
 
