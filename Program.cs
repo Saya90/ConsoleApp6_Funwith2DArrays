@@ -21,6 +21,9 @@ namespace ConsoleApp6_Funwith2DArrays
             //const int GRID_VALUE = 1;
             //const int NEW_GRID_START = 1;
             int newGridv = 1;
+            string border = "¦";
+            const int NUMBER_WIDTH = 3; // z.B. 000 → 3 Stellen";
+            string horizontal = new string('_', NUMBER_WIDTH); // passt zur Breite der Zahlen
 
 
 
@@ -46,14 +49,15 @@ namespace ConsoleApp6_Funwith2DArrays
 
             for (int i = 0; i < column; i++)
             {
-                Console.Write(" _ _ ");
+                Console.Write($" {horizontal}");
+
 
             }
             Console.WriteLine();
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
-                Console.Write("¦");
+                Console.Write(border);
 
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
@@ -62,7 +66,7 @@ namespace ConsoleApp6_Funwith2DArrays
                     board[rowIndex, columnIndex] = newGridv * newGridv;
                     Console.Write($"{board[rowIndex, columnIndex]:000}");
 
-                    Console.Write("¦");
+                    Console.Write(border);
 
                     newGridv++;
                                        
@@ -73,7 +77,7 @@ namespace ConsoleApp6_Funwith2DArrays
 
             for (int i = 0; i < column; i++)
             {
-                Console.Write(" _ _ ");
+                Console.Write($" {horizontal}");
 
             }
 
