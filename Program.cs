@@ -27,25 +27,6 @@ namespace ConsoleApp6_Funwith2DArrays
 
 
 
-            //if user chooses 4 columns , 3 rows --> total repetition is 12 times
-
-            //Console.WriteLine(board[0, 0] = 1);
-            //Console.WriteLine(board[0, 1] = 2);
-            //Console.WriteLine(board[0, 2] = 3);
-            //Console.WriteLine(board[0, 3] = 4);
-
-            //Console.WriteLine(board[1, 0] = 5);
-            //Console.WriteLine(board[1, 1] = 6);
-            //Console.WriteLine(board[1, 2] = 7);
-            //Console.WriteLine(board[1, 3] = 8);
-
-            //Console.WriteLine(board[2, 0] = 9);
-            //Console.WriteLine(board[2, 1] = 10);
-            //Console.WriteLine(board[2, 2] = 11);
-            //Console.WriteLine(board[2, 3] = 12);
-
-            //while (columnIndex < column)
-            //{ Console.Write("_"); }
 
             for (int i = 0; i < column; i++)
             {
