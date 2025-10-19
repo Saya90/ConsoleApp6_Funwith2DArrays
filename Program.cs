@@ -85,20 +85,4 @@ namespace ConsoleApp6_Funwith2DArrays
     }
 }
 
-// for (int rowIndex = 0; rowIndex < row; rowIndex++)
-//{
-//    for (int columnIndex = 0; columnIndex < column; columnIndex++)
-//    {
 
-//        board[rowIndex, columnIndex] = gridValue;
-//        Console.Write(board[rowIndex, columnIndex]);
-
-//        gridValue++;
-
-//    }
-
-//    Console.WriteLine();
-//}
-
-
-//  Console.Write("_");
