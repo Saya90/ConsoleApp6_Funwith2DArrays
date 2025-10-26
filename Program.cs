@@ -53,8 +53,18 @@ namespace ConsoleApp6_Funwith2DArrays
                                        
                 }
 
-                Console.WriteLine();
+                
+                  Console.WriteLine();
+
+                if (rowIndex > row)
+                {
+                    break;
                 }
+            }
+
+
+           
+
 
             for (int i = 0; i < column; i++)
             {
