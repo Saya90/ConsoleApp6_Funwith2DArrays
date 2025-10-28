@@ -16,7 +16,7 @@ namespace ConsoleApp6_Funwith2DArrays
             //Console.WriteLine("You typed  " + column + " , "  + row);
 
 
-            int[,] board = new int[row, column];  
+            int[,] board = new int[row, column];
 
             //const int GRID_VALUE = 1;
             //const int NEW_GRID_START = 1;
@@ -50,21 +50,22 @@ namespace ConsoleApp6_Funwith2DArrays
                     Console.Write(border);
 
                     newGridv++;
-                                       
+
                 }
 
-                
-                  Console.WriteLine();
+                Console.WriteLine();
 
-                if (rowIndex > row)
+                if (rowIndex > row - 1)
                 {
                     break;
                 }
+
+                //if (rowIndex < row -1)
+                //{
+                //    Console.WriteLine();
+                //}
+
             }
-
-
-           
-
 
             for (int i = 0; i < column; i++)
             {
