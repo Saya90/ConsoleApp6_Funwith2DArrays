@@ -15,6 +15,14 @@ namespace ConsoleApp6_Funwith2DArrays
             int row = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("You typed  " + column + " , "  + row);
 
+            Console.WriteLine("Choose a specific mode for example 1 for sequential numbers ; 2 for only even numbers; 3 for exponential numbers n²");
+            int mode = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"You chose option " + mode);
+
+
+            const int SEQ_NUM = 1;
+            const int EVEN_NUM = 2;
+            const int EXP_NUM = 3;
 
             int[,] board = new int[row, column];
 
@@ -53,17 +61,17 @@ namespace ConsoleApp6_Funwith2DArrays
 
                 }
 
-                Console.WriteLine();
+                //Console.WriteLine();
 
-                if (rowIndex > row - 1)
-                {
-                    break;
-                }
-
-                //if (rowIndex < row -1)
+                //if (rowIndex > row - 1)
                 //{
-                //    Console.WriteLine();
+                //    break;
                 //}
+
+                if (rowIndex < row - 1)
+                {
+                    Console.WriteLine();
+                }
 
             }
 
@@ -73,7 +81,7 @@ namespace ConsoleApp6_Funwith2DArrays
 
             }
 
-        }
+                }
     }
 }
 
