@@ -7,6 +7,21 @@ namespace ConsoleApp6_Funwith2DArrays
     {
         static void Main(string[] args)
         {
+            const int SEQ_NUM = 1;
+            const int EVEN_NUM = 2;
+            const int EXP_NUM = 3;
+            //const int GRID_VALUE = 1;
+            //const int NEW_GRID_START = 1;
+            int newGridv = 1;
+            int resultMode1 = newGridv++;
+            int resultMmode2 = newGridv * 2;
+            int resultMode3 = newGridv * newGridv;
+            string border = "¦";
+            const int NUMBER_WIDTH = 3; // z.B. 000 → 3 Stellen";
+            string horizontal = new string('_', NUMBER_WIDTH); // passt zur Breite der Zahlen
+
+
+
             Console.WriteLine("Hi, Tell me how many fields do you want your board to have? Please type only numbers");
             Console.WriteLine("Columns:");
             int column = Convert.ToInt32(Console.ReadLine());
@@ -19,30 +34,16 @@ namespace ConsoleApp6_Funwith2DArrays
             int mode = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"You chose option " + mode);
 
-
-            const int SEQ_NUM = 1;
-            const int EVEN_NUM = 2;
-            const int EXP_NUM = 3;
-
             int[,] board = new int[row, column];
-
-            //const int GRID_VALUE = 1;
-            //const int NEW_GRID_START = 1;
-            int newGridv = 1;
-            string border = "¦";
-            const int NUMBER_WIDTH = 3; // z.B. 000 → 3 Stellen";
-            string horizontal = new string('_', NUMBER_WIDTH); // passt zur Breite der Zahlen
-
-
-
 
             for (int i = 0; i < column; i++)
             {
                 Console.Write($" {horizontal}");
 
-
             }
+
             Console.WriteLine();
+
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
@@ -51,8 +52,22 @@ namespace ConsoleApp6_Funwith2DArrays
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
 
+                    if (mode == SEQ_NUM)
+                    {
+                        board[rowIndex, columnIndex] = resultMode1;
+                    }
 
-                    board[rowIndex, columnIndex] = newGridv * newGridv;
+                    else if (mode == EVEN_NUM)
+                    {
+                        board[rowIndex, columnIndex] = resultMmode2;
+                    }
+
+                    else if (mode == EXP_NUM)
+                    {
+
+                        board[rowIndex, columnIndex] = newGridv * newGridv;
+                    }
+
                     Console.Write($"{board[rowIndex, columnIndex]:000}");
 
                     Console.Write(border);
@@ -61,19 +76,18 @@ namespace ConsoleApp6_Funwith2DArrays
 
                 }
 
-                //Console.WriteLine();
-
-                //if (rowIndex > row - 1)
-                //{
-                //    break;
-                //}
-
                 if (rowIndex < row - 1)
                 {
                     Console.WriteLine();
                 }
-
             }
+
+            //Console.WriteLine();
+
+            //if (rowIndex > row - 1)
+            //{
+            //    break;
+            //}
 
             for (int i = 0; i < column; i++)
             {
@@ -81,8 +95,11 @@ namespace ConsoleApp6_Funwith2DArrays
 
             }
 
-                }
-    }
+
+        }
+
+                
+
 }
-
-
+        }
+   
