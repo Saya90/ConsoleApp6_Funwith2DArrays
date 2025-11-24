@@ -36,15 +36,12 @@ namespace ConsoleApp6_Funwith2DArrays
             for (int i = 0; i < column; i++)
             {
                 Console.Write($" {horizontal}");
-
             }
-
             Console.WriteLine();
 
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
-                Console.Write(border);
 
                 for (int columnIndex = 0; columnIndex < column; columnIndex++)
                 {
@@ -63,13 +60,40 @@ namespace ConsoleApp6_Funwith2DArrays
                     {
 
                         board[rowIndex, columnIndex] = newGridv * newGridv;
+
+                        newGridv++;
                     }
+                    
+
+                    else if (mode != EXP_NUM && mode != SEQ_NUM && mode != EVEN_NUM)
+                    {
+
+                        
+                        Console.Write("Please only choose from the given options.");
+
+                        break;
+
+                    }               
+
+
+                }
+
+                
+            }
+
+            
+
+
+            for (int rowIndex = 0; rowIndex < row; rowIndex++)
+            {
+                Console.Write(border);
+
+                for (int columnIndex = 0; columnIndex < column; columnIndex++)
+                {
 
                     Console.Write($"{board[rowIndex, columnIndex]:000}");
 
                     Console.Write(border);
-
-                    newGridv++;
 
                 }
 
@@ -77,14 +101,9 @@ namespace ConsoleApp6_Funwith2DArrays
                 {
                     Console.WriteLine();
                 }
+
             }
 
-            //Console.WriteLine();
-
-            //if (rowIndex > row - 1)
-            //{
-            //    break;
-            //}
 
             for (int i = 0; i < column; i++)
             {
@@ -92,11 +111,10 @@ namespace ConsoleApp6_Funwith2DArrays
 
             }
 
-
         }
 
-                
 
+
+    }
 }
-        }
-   
+
