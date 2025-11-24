@@ -13,9 +13,6 @@ namespace ConsoleApp6_Funwith2DArrays
             //const int GRID_VALUE = 1;
             //const int NEW_GRID_START = 1;
             int newGridv = 1;
-            int resultMode1 = newGridv++;
-            int resultMmode2 = newGridv * 2;
-            int resultMode3 = newGridv * newGridv;
             string border = "¦";
             const int NUMBER_WIDTH = 3; // z.B. 000 → 3 Stellen";
             string horizontal = new string('_', NUMBER_WIDTH); // passt zur Breite der Zahlen
@@ -30,7 +27,7 @@ namespace ConsoleApp6_Funwith2DArrays
             int row = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("You typed  " + column + " , "  + row);
 
-            Console.WriteLine("Choose a specific mode for example 1 for sequential numbers ; 2 for only even numbers; 3 for exponential numbers n²");
+            Console.WriteLine("Choose a specific mode for example 1 for sequential numbers ; 2 for only even numbers; 3 for exponential numbers = n²");
             int mode = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"You chose option " + mode);
 
@@ -54,12 +51,12 @@ namespace ConsoleApp6_Funwith2DArrays
 
                     if (mode == SEQ_NUM)
                     {
-                        board[rowIndex, columnIndex] = resultMode1;
+                        board[rowIndex, columnIndex] = newGridv;
                     }
 
                     else if (mode == EVEN_NUM)
                     {
-                        board[rowIndex, columnIndex] = resultMmode2;
+                        board[rowIndex, columnIndex] = newGridv * 2;
                     }
 
                     else if (mode == EXP_NUM)
