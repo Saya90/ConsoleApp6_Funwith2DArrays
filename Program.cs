@@ -39,6 +39,12 @@ namespace ConsoleApp6_Funwith2DArrays
             }
             Console.WriteLine();
 
+             if (mode != EXP_NUM && mode != SEQ_NUM && mode != EVEN_NUM)
+            {
+
+                Console.WriteLine("Please only choose from the given options.");
+
+             }
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
@@ -63,22 +69,10 @@ namespace ConsoleApp6_Funwith2DArrays
 
                         newGridv++;
                     }
-                    
-
-                    else if (mode != EXP_NUM && mode != SEQ_NUM && mode != EVEN_NUM)
-                    {
-
-                        
-                        Console.Write("Please only choose from the given options.");
-
-                        break;
-
-                    }               
-
-
+                 
                 }
 
-                
+               
             }
 
             
