@@ -10,6 +10,8 @@ namespace ConsoleApp6_Funwith2DArrays
             const int SEQ_NUM = 1;
             const int EVEN_NUM = 2;
             const int EXP_NUM = 3;
+            const int EVEN_MULTIPLIER = 2;
+
             //const int GRID_VALUE = 1;
             //const int NEW_GRID_START = 1;
             int newGridv = 1;
@@ -39,12 +41,12 @@ namespace ConsoleApp6_Funwith2DArrays
             }
             Console.WriteLine();
 
-             if (mode != EXP_NUM && mode != SEQ_NUM && mode != EVEN_NUM)
+            if (mode != EXP_NUM && mode != SEQ_NUM && mode != EVEN_NUM)
             {
 
                 Console.WriteLine("Please only choose from the given options.");
 
-             }
+            }
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
@@ -59,23 +61,19 @@ namespace ConsoleApp6_Funwith2DArrays
 
                     else if (mode == EVEN_NUM)
                     {
-                        board[rowIndex, columnIndex] = newGridv * 2;
+                        board[rowIndex, columnIndex] = newGridv * EVEN_MULTIPLIER;
                     }
 
                     else if (mode == EXP_NUM)
                     {
-
                         board[rowIndex, columnIndex] = newGridv * newGridv;
-
-                        newGridv++;
                     }
-                 
+
+                    newGridv++;
                 }
 
-               
             }
 
-            
 
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
