@@ -11,28 +11,81 @@ namespace ConsoleApp6_Funwith2DArrays
             const int EVEN_NUM = 2;
             const int EXP_NUM = 3;
             const int EVEN_MULTIPLIER = 2;
+            const int NUMBER_WIDTH = 3; // z.B. 000 → 3 Stellen";
 
             //const int GRID_VALUE = 1;
             //const int NEW_GRID_START = 1;
-            int newGridv = 1;
             string border = "¦";
-            const int NUMBER_WIDTH = 3; // z.B. 000 → 3 Stellen";
             string horizontal = new string('_', NUMBER_WIDTH); // passt zur Breite der Zahlen
 
 
-
-            Console.WriteLine("Hi, Tell me how many fields do you want your board to have? Please type only numbers");
+            //Console.WriteLine("Hi, Tell me how many fields do you want your board to have? Please type only numbers");
             Console.WriteLine("Columns:");
-            int column = Convert.ToInt32(Console.ReadLine());
+            //int column = Convert.ToInt32(Console.ReadLine());
+
+            int column;
+            while (true)
+            {
+                Console.Write("Enter a number: ");
+
+                bool isInt = int.TryParse(Console.ReadLine(), out column);
+
+                if (isInt)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                }
+
+            }
 
             Console.WriteLine("Rows:");
-            int row = Convert.ToInt32(Console.ReadLine());
+            //int row = Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("You typed  " + column + " , "  + row);
 
+            int row;
+            while (true)
+            {
+                Console.Write("Enter a number: ");
+
+                bool isInt = int.TryParse(Console.ReadLine(), out row);
+
+                if (isInt)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                }
+
+            }
+
             Console.WriteLine("Choose a specific mode for example 1 for sequential numbers ; 2 for only even numbers; 3 for exponential numbers = n²");
-            int mode = Convert.ToInt32(Console.ReadLine());
+            //int mode = Convert.ToInt32(Console.ReadLine());
+
+            int mode;
+            while (true)
+            {
+                Console.Write("Enter a number: ");
+
+                bool isInt = int.TryParse(Console.ReadLine(), out mode);
+
+                if (isInt)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                }
+
+            }
             Console.WriteLine($"You chose option " + mode);
 
+            int newGridv = 1;
             int[,] board = new int[row, column];
 
             for (int i = 0; i < column; i++)
