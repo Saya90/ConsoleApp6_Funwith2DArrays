@@ -75,7 +75,16 @@ namespace ConsoleApp6_Funwith2DArrays
 
                 if (isInt)
                 {
-                    break;
+                    if (mode < 4)
+
+                        break;
+
+                    else
+
+
+                    {
+                        Console.WriteLine("Invalid input. Please enter a valid number from 1 to 3.");
+                    }
                 }
                 else
                 {
@@ -84,6 +93,7 @@ namespace ConsoleApp6_Funwith2DArrays
 
             }
             Console.WriteLine($"You chose option " + mode);
+
 
             int newGridv = 1;
             int[,] board = new int[row, column];
