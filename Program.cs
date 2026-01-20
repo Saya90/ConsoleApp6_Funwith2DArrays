@@ -111,33 +111,75 @@ namespace ConsoleApp6_Funwith2DArrays
 
             }
 
-            for (int rowIndex = 0; rowIndex < row; rowIndex++)
+            //for (int rowIndex = 0; rowIndex < row; rowIndex++)
+            //{
+
+            //    for (int columnIndex = 0; columnIndex < column; columnIndex++)
+            //    {
+
+            //        if (mode == SEQ_NUM)
+            //        {
+            //            board[rowIndex, columnIndex] = newGridv;
+            //        }
+
+            //        else if (mode == EVEN_NUM)
+            //        {
+            //            board[rowIndex, columnIndex] = newGridv * EVEN_MULTIPLIER;
+            //        }
+
+            //        else if (mode == EXP_NUM)
+            //        {
+            //            board[rowIndex, columnIndex] = newGridv * newGridv;
+            //        }
+
+            //        newGridv++;
+            //    }
+
+            //}
+
+            if (mode == SEQ_NUM)
             {
 
-                for (int columnIndex = 0; columnIndex < column; columnIndex++)
+                for (int rowIndex = 0; rowIndex < row; rowIndex++)
                 {
 
-                    if (mode == SEQ_NUM)
+                    for (int columnIndex = 0; columnIndex < column; columnIndex++)
                     {
                         board[rowIndex, columnIndex] = newGridv;
-                    }
+                        newGridv++;
 
-                    else if (mode == EVEN_NUM)
-                    {
-                        board[rowIndex, columnIndex] = newGridv * EVEN_MULTIPLIER;
                     }
+                }
+            }
 
-                    else if (mode == EXP_NUM)
+            else if (mode == EVEN_NUM)
+            {
+                for (int rowIndex = 0; rowIndex < row; rowIndex++)
+                {
+                    for (int columnIndex = 0; columnIndex < column; columnIndex++)
+
                     {
+                    board[rowIndex, columnIndex] = newGridv * EVEN_MULTIPLIER;
+                        newGridv++;
+                    }
+                }
+            }
+            else if (mode == EXP_NUM)
+            {
+                for (int rowIndex = 0; rowIndex < row; rowIndex++)
+                {
+
+                    for (int columnIndex = 0; columnIndex < column; columnIndex++)
+                    {
+
                         board[rowIndex, columnIndex] = newGridv * newGridv;
+                        newGridv++;
+
                     }
 
-                    newGridv++;
                 }
 
             }
-
-
 
             for (int rowIndex = 0; rowIndex < row; rowIndex++)
             {
@@ -159,6 +201,7 @@ namespace ConsoleApp6_Funwith2DArrays
 
             }
 
+            Console.WriteLine() ;
 
             for (int i = 0; i < column; i++)
             {
@@ -172,4 +215,3 @@ namespace ConsoleApp6_Funwith2DArrays
 
     }
 }
-
